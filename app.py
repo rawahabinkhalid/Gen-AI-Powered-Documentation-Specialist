@@ -148,19 +148,24 @@ def process_file(input_file):
                 f.close()
 
         response = call_crew_kickoff(str_current_datetime)
-        
-        return response
+
+        output_filename = "generated-brd/generated-brd_" + str_current_datetime + ".md"
+        with open(output_filename, 'w', encoding='utf-8') as f:
+            f.write(response)
+            f.close()
+
+        return output_filename, response
 
 # %%
 
 with gr.Blocks() as demo:
     with gr.Row():
         file_input = gr.File(label="Upload the meeting transcript (.docx file supported only)", file_types=[".docx"], file_count="single")
-        # download_btn = gr.File(label="Download Processed File in Markdown", file_count="single")
+        download_btn = gr.File(label="Download Processed File in Markdown", file_count="single")
     with gr.Row():
         markdown_output = gr.Markdown()
 
-    file_input.change(process_file, inputs=file_input, outputs=[markdown_output])
+    file_input.change(process_file, inputs=file_input, outputs=[download_btn, markdown_output])
 
 demo.launch()
 
