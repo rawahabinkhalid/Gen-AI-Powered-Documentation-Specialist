@@ -1,0 +1,6 @@
+crewai
+crewai_tools
+langchain_community
+mammoth
+markdown
+python-dotenv
