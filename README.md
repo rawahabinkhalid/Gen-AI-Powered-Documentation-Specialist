@@ -108,3 +108,16 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any inquiries or feedback, please contact [rawahabinkhalid@gmail.com](mailto:rawahabinkhalid@gmail.com).
+
+
+## Hugging Face Configuration
+---
+title: Gen AI Powered Documentation Specialist
+emoji: 📈
+colorFrom: pink
+colorTo: blue
+sdk: gradio
+sdk_version: 4.36.0
+app_file: app.py
+pinned: false
+---
