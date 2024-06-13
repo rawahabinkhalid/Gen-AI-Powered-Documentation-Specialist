@@ -28,7 +28,6 @@ cleaned_brd_template = brd_template_content.replace('\ufeff', '')
 
 #print(cleaned_brd_template)
 
-# %%
 def call_crew_kickoff(str_current_datetime):
     # Instantiate tools
     mt_tool = FileReadTool(txt='./meeting-transcription/meeting-transcript_' + str_current_datetime + '.md')
@@ -129,10 +128,6 @@ def call_crew_kickoff(str_current_datetime):
     return result
 
 
-
-# %%
-
-# %%
 def process_file(input_file):
     if input_file is not None:
         current_datetime = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
@@ -157,7 +152,6 @@ def process_file(input_file):
 
         return output_filename, response
 
-# %%
 
 with gr.Blocks() as demo:
     with gr.Row():
