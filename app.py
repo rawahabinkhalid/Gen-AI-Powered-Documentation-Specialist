@@ -157,6 +157,7 @@ with gr.Blocks() as demo:
     with gr.Row():
         file_input = gr.File(label="Upload the meeting transcript (.docx file supported only)", file_types=[".docx"], file_count="single")
         download_btn = gr.File(label="Download Processed File in Markdown", file_count="single")
+        
     with gr.Row():
         markdown_output = gr.Markdown()
 
