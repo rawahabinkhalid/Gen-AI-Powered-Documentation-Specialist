@@ -153,6 +153,7 @@ def process_file(input_file):
         with open(output_filename, 'w', encoding='utf-8') as f:
             f.write(response)
             f.close()
+        
 
         return output_filename, response
 
