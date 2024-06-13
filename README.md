@@ -113,7 +113,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Mammoth](https://github.com/mwilliamson/mammoth) for the .docx to markdown conversion.
 
 ## Reference URLs
-- [Hugging Face Deployed Model](https://huggingface.co/spaces/rawahabinkhalid/multi-agent-brd-generator) for the deployed machine learning model.
+- [Hugging Face Deployed Model](https://huggingface.co/spaces/rawahabinkhalid/Gen-AI-Powered-Documentation-Specialist) for the deployed machine learning model.
 - [GitHub Repository](https://github.com/rawahabinkhalid/Gen-AI-Powered-Documentation-Specialist) for the project's repository.
 
 ## Contact
