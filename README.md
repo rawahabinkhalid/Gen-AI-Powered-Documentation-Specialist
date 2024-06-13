@@ -24,7 +24,7 @@ This project is a Proof of Concept (POC) for a "Gen AI Powered Documentation Spe
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-repo/gen-ai-doc-specialist.git
+    git clone https://github.com/rawahabinkhalid/gen-ai-doc-specialist.git
     cd gen-ai-doc-specialist
     ```
 
@@ -103,4 +103,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or feedback, please contact [your-email@example.com](mailto:your-email@example.com).
+For any inquiries or feedback, please contact [rawahabinkhalid@gmail.com](mailto:rawahabinkhalid@gmail.com).
