@@ -9,7 +9,7 @@ app_file: app.py
 pinned: false
 ---
 
-# Gen AI Powered Documentation Specialist - BRD Generation
+# Gen AI Powered Documentation Specialist - Business Requirement Document (BRD) Generation
 
 ## Overview
 
@@ -17,7 +17,7 @@ This project is a Proof of Concept (POC) for a "Gen AI Powered Documentation Spe
 
 ## Features
 
-- **Automated BRD Generation**: Utilizes advanced AI agents to analyze meeting transcripts and produce well-structured BRDs.
+- **Automated Business Requirement Document (BRD) Generation**: Utilizes advanced AI agents to analyze meeting transcripts and produce well-structured BRDs.
 - **Agent Roles**: Includes a Business Analyst agent and a Subject Matter Expert (SME) agent to ensure both functional and technical requirements are accurately captured.
 - **Semantic Search and File Read Tools**: Enhances the agents' capabilities to process and extract relevant information from transcripts.
 - **Gradio Interface**: Provides an easy-to-use web interface for uploading meeting transcripts and displaying the generated BRD.
@@ -57,21 +57,48 @@ This project is a Proof of Concept (POC) for a "Gen AI Powered Documentation Spe
 
 1. Ensure you have a meeting transcript in `.docx` format ready for processing.
 
-2. Run the application:
+2. For Gradio implementation, run:
 
     ```bash
     python app.py
     ```
 
-3. Open the provided Gradio interface URL in your web browser.
+   For Streamlit implementation, run:
+
+    ```bash
+    python app-streamlit.py
+    ```
+
+3. Open the provided interface URL in your web browser.
 
 4. Upload your meeting transcript `.docx` file.
 
 5. The AI agents will process the transcript, and the generated BRD will be displayed in markdown format.
 
+## Agent Details
+- **Business Analyst Agent**:
+  - **Role**: Effectively translate meeting transcripts and discussions into a well-structured BRD.
+  - **Goal**: Accurately capture project requirements and stakeholder needs.
+  - **Tools**: Includes File Read Tool and Semantic Search Tool.
+  - **Backstory**: Experienced in business analysis with a strong understanding of technical environments and documentation.
+- **Subject Matter Expert (SME) Agent**:
+  - **Role**: Ensure technical feasibility and translate technical discussions into actionable requirements.
+  - **Goal**: Propose a clear and concise project name and ensure technical accuracy in the BRD.
+  - **Tools**: File Read Tool and Semantic Search Tool.
+  - **Backstory**: Possesses in-depth knowledge in the project's domain, crucial for refining technical aspects of the BRD.
+## Crew and Task Configuration
+- **Crew Configuration**:
+  - Composed of a Business Analyst and a Subject Matter Expert.
+  - Uses a hierarchical management approach to process tasks effectively.
+  - **Manager LLM**: Utilizes the ChatOpenAI model GPT-3.5 Turbo, configured with a zero temperature setting for deterministic responses, enhancing the crew's decision-making processes.
+- **Task Definitions**:
+  - **Analyze Meeting for BRD Task**: Involves extracting and organizing information from meeting transcripts into the BRD template.
+  - **SME Technical Review Task**: Reviews and refines the technical content within the BRD, ensuring all functionalities are realistic and feasible.
+
 ## File Structure
 
 - `app.py`: Main application file containing the Gradio interface and processing logic.
+- `app-streamlit.py`: Alternative main application file containing the Streamlit interface for similar functionality.
 - `brd-template/`: Directory containing the BRD template in markdown format.
 - `meeting-transcription/`: Directory where processed meeting transcripts will be saved.
 - `requirements.txt`: List of required Python packages.
